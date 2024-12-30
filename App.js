@@ -7,7 +7,11 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
     <PanGestureHandler
       onGestureEvent={(gestureEvent) => {
-        console.log(gestureEvent.nativeEvent);
+        let transX = gestureEvent.nativeEvent.translationX;
+        let transY = gestureEvent.nativeEvent.translationY;
+        console.log(`X: ${transX}, Y: ${transY}`);
+        // console.log(gestureEvent.nativeEvent);
+        
       }}>
       <View style={styles.container}>
         
